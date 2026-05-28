@@ -22,4 +22,4 @@ input2 = [
 # When find a 0, enter the 0 need to check the surounding positions
 # Need to loop through the 
 def countHoles(input): 
-    
+     
