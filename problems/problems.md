@@ -1,8 +1,11 @@
 # Problems (Randomized)
 
 - [ ] [3Sum](https://leetcode.com/problems/3sum/) — Medium
+- [ ] [Remove Duplicates](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/) - Easy
 - [ ] [Subsets](https://leetcode.com/problems/subsets/) — Medium
 - [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard
+- [ ] [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) - Medium
+- [ ] [Maximum Average Subarray](https://leetcode.com/problems/maximum-average-subarray-i/description/) - Easy
 - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/) — Medium
 - [ ] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) — Easy
 - [ ] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) — Easy
@@ -27,12 +30,13 @@
 - [ ] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy
 - [ ] [Gas Station](https://leetcode.com/problems/gas-station/) — Medium
 - [ ] [Sort an Array](https://leetcode.com/problems/sort-an-array/) — Medium
+- [ ] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - Medium
 - [ ] [Pow(x, n)](https://leetcode.com/problems/powx-n/) — Medium
 - [ ] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) — Easy
 - [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) — Medium
 - [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) — Easy
 - [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) — Medium
-- [ ] [Sort Colors](https://leetcode.com/problems/sort-colors/) — Medium
+- [ ] [Sort Colors](https://leetcode.com/problems/sort-colors/) — Mediumrem
 - [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) — Medium
 - [ ] [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) — Easy
 - [ ] [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) — Easy
