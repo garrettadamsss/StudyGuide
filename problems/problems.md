@@ -17,7 +17,7 @@
 - [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/) — Medium
 - [ ] [Jump Game](https://leetcode.com/problems/jump-game/) — Medium
 - [ ] [Permutations](https://leetcode.com/problems/permutations/) — Medium
-- [ ] [Coin Change](https://leetcode.com/problems/coin-change/) — Medium
+- [ ] [Coin Change](https://leetcode.com/problems/coin-change/) — Medium ***
 - [ ] [Binary Search](https://leetcode.com/problems/binary-search/) — Easy
 - [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/) — Medium
 - [ ] [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) — Medium
@@ -41,8 +41,9 @@
 - [ ] [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) — Easy
 - [ ] [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) — Easy
 - [ ] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) — Medium
-- [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) — Medium
+- [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) — Medium *** 
 - [ ] [Redundant Connection](https://leetcode.com/problems/redundant-connection/) — Medium
 - [ ] [Network Delay Time](https://leetcode.com/problems/network-delay-time/) — Medium
 - [ ] [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) — Medium
 - [ ] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) — Hard
+- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy ***
