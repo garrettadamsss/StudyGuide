@@ -47,3 +47,7 @@
 - [ ] [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) — Medium
 - [ ] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) — Hard
 - [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy ***
+- [ ] [Subsets](https://leetcode.com/problems/subsets/description/) - Medium ***
+- [ ] [Permutations](https://leetcode.com/problems/permutations/description/) - Medium ***
+
+
