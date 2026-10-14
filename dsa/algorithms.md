@@ -518,7 +518,7 @@ It's dynamic since you can't consider local best choices(Greedy) and you have to
 
 ### Exmample Fibonacci
 
-![](images/fib.png)
+![](images/algorithms/fib.png)
 
 The overlap results in O(2^n)!
 
@@ -695,7 +695,7 @@ Backtracking builds a **tree**. The tree is built while traversing using **DFS**
 
 Example: Generate all strings of size N using only the letters 'A' and 'B'. 
 
-![](images/backtracking.jpg)
+![](images/algorithms/backtracking.jpg)
 
 - Every node is a partial state
 - Every branch is a choice
@@ -761,11 +761,11 @@ Count = Sum of each subproblem and the number of choices that can be made at tha
 
 **Permutation**
 
-![](images/backtracking-permutations.png)
+![](images/algorithms/backtracking-permutations.png)
 
 **All subsets** 
 
-![](images/backtracking-subsets.png)
+![](images/algorithms/backtracking-subsets.png)
 
 ```python
 # Subsets
@@ -774,13 +774,13 @@ Count = Sum of each subproblem and the number of choices that can be made at tha
 
 
 # Trees
+![](images/algorithms/tree-bfs-dfs.png)
 
 ## Breadth First Search (BFS)
 Explore all sibling nodes first then visit children starting with the root node. 
 
 BFS uses a queue to keep track of which nodes to visit next. 
 
-![](images/tree-bfs.png)
 
 1. Create a queue and add the root node to it. 
 2. Loop through queue 

@@ -344,15 +344,15 @@ Graphs can be **undirected**, connections go both ways, or **directed**, connect
 
 Graphs can be **weighted**, edges have a value, or **unweighted**, all edges treated equally. 
 
-![](images/graphs.png)
+![](images/dataStructures/graphs.png)
 
 ## Graph Representations
 
 ### Adjacency Matrix
-![](images/adjancy-matrix.png)
+![](images/dataStructures/adjancy-matrix.png)
 
 ### Adjacency List
-![](images/adjancy-list.png)
+![](images/dataStructures/adjancy-list.png)
 
 
 
@@ -400,7 +400,7 @@ Structural Layout
 - Leaf Node: A node that has no children (the absolute end of a branch).
 - Subtree: Any node along with all of its descendants forms a mini-tree inside the larger tree.
 
-![](images/tree.png)
+![](images/dataStructures/tree.png)
 
 ```python
 # Node structure for tree
@@ -429,7 +429,7 @@ A Binary Tree is a type of tree data structure where each node can have a maximu
 - A **full Binary Tree** is a kind of tree where each node has either 0 or 2 child nodes.
 - A **perfect Binary Tree** has all leaf nodes on the same level, which means that all levels are full of nodes, and all internal nodes have two child nodes.The properties of a perfect Binary Tree means it is also full, balanced, and complete.
 
-![](images/binary-tree.png)
+![](images/dataStructures/binary-tree.png)
 
 ```python
 # Binary Tree as Node class
@@ -464,7 +464,7 @@ A Binary Search Tree (BST) is a node-based binary tree data structure that follo
 - The right subtree of a node contains only nodes with keys greater than the node’s key.
 - Both the left and right subtrees must also be binary search trees.
 
-![](images/binary-search-tree.png)
+![](images/dataStructures/binary-search-tree.png)
 
 ```python
 class Node:
@@ -548,7 +548,7 @@ A Heap is a **complete binary tree** data structure that satisfies the heap prop
 
 Heaps are commonly used to create Priority Queues or finding the K-largest elements.
 
-![](images/heap.png)
+![](images/dataStructures/heap.png)
 
 ## Built in method
 
