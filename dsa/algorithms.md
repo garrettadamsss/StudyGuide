@@ -169,18 +169,12 @@ Each call has its own distinct state: its arguments, local variables, and positi
 ![](images/algorithms/recursion.png)
 
 1. Define the subproblem. What does one call of this function represent?
-
 2. Identify the base case. When can the call answer immediately?
-    Think from the bottom -> up 
-
+  Think from the bottom -> up
 3. Does the call need information passed down from its parent?
-
 4. Does it need answers returned from its children?
-
 5. Does it need both?
-
 6. Write the recursive step. Decide how smaller calls help solve the current call.
-
 
 ```markdown
 BASE CASE
@@ -844,7 +838,7 @@ function bfs(root: TreeNode | null): number[] {
 
 - Finding shortest path
 - Traversing level by level
-- Find minimum dpeth of a binary Tree
+- Find minimum depth of a binary Tree
 - Finding nearest node satisfying a condition
 - Problems involving distances or levels
 
@@ -856,9 +850,9 @@ Explores a branch as far as possible before backtracking and exploring the rest.
 
 Uses recursion/stack to keep track of previously visited nodes. 
 
-1. Base case: if the node is null, return. (We've gone past a leaf, or the tree is empty.)
+1. Base case: When to stop going down a path.
 2. Recursively explore the node's left and right children.
-3. Do work on the current node. *Where* this happens relative to the recursive calls determines the traversal type (pre/in/post order).
+3. Process the current node. *Where* this happens relative to the recursive calls above determines the traversal type (pre/in/post order).
 
 ```typescript
 const result = [];
@@ -882,7 +876,7 @@ return result;
 
 ### Types of DFS
 
-*Think of where the current node is saved.*
+*Think of where the current node is processed.*
 
 1. Preorder: Node -> left -> right
 
@@ -909,6 +903,7 @@ result.push(node.val);
 ```
 
 
+
 ### Problem Clues
 
 - Finding the maximum depth or height of a tree.
@@ -922,7 +917,7 @@ result.push(node.val);
 /**
     subproblem: return its max height 
     base case: at node = null, height is 0 
-    parent: parent needs to pass child node
+    parent: nothing to pass 
     child: child needs to pass up the height
     recursive step: get max height from left and right child nodes and + 1
 */
@@ -936,6 +931,30 @@ function maxDepth(root: TreeNode | null): number {
     }
     return dfs(root); 
 };
+
+/**
+subproblem: check if currentSum + left or right = targetSum
+base case: if leaf node then check currentSum == targetSum
+*/
+function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
+    function dsf(node: TreeNode | null, currentSum) {
+        // edge case
+        if (node == null) return false; 
+
+        currentSum += node.val;
+
+        // base case: leaf node
+        if (node.left == null && node.right == null ) {
+            return currentSum == targetSum;
+        }
+
+        // explore
+        const leftSum = dsf(node.left, currentSum);
+        const rightSum = dsf(node.right, currentSum);
+        return leftSum || rightSum; 
+    }
+    return dsf(root, 0);
+};
 ```
 
 ---
@@ -945,6 +964,10 @@ function maxDepth(root: TreeNode | null): number {
 ## Binary Search Tree (BST)
 
 
+
+# Graphs vs. Trees
+
+Biggest difference in implementation is the fact that you need a visited set to prevent circular loops in graphs. 
 
 # Graphs
 

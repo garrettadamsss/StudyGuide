@@ -49,5 +49,10 @@
 - [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy ***
 - [ ] [Subsets](https://leetcode.com/problems/subsets/description/) - Medium ***
 - [ ] [Permutations](https://leetcode.com/problems/permutations/description/) - Medium ***
+- [ ] [Path Sum](https://leetcode.com/problems/path-sum/description/) - Easy ***
+- [ ] [Maximu Depth of a Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) - Easy ***
+- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) - Medium ***
+
+- 
 
 
