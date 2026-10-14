@@ -518,7 +518,7 @@ It's dynamic since you can't consider local best choices(Greedy) and you have to
 
 ### Exmample Fibonacci
 
-<img src="images/fib.png" width="600"/>
+![](images/fib.png)
 
 The overlap results in O(2^n)!
 
@@ -621,13 +621,13 @@ Choose `top down` or `bottom up` approach
 - Make a decision at each position
 - Answer depenends on previous positions
 
-# DP Algorithms 
-
-## Kadane's Algorithm 
 
 
+# DP Algorithms
 
 
+
+## Kadane's Algorithm
 
 
 
@@ -695,7 +695,7 @@ Backtracking builds a **tree**. The tree is built while traversing using **DFS**
 
 Example: Generate all strings of size N using only the letters 'A' and 'B'. 
 
-<img src="images/backtracking.jpg" width="600"/>
+![](images/backtracking.jpg)
 
 - Every node is a partial state
 - Every branch is a choice
@@ -738,7 +738,6 @@ def backtrack(state):
 - Explore/Retun all possible paths: maze or grid path problem
 
 
-
 ### Permutations vs Combinations vs Subsets
 
 > **LeetCode tip:** Problem titles overlap. Decide first: **Does order matter?** **Must the answer have exactly size *k*?**
@@ -755,31 +754,60 @@ A **combination** is a **subset** with exactly *k* elements. Phrases like "all c
 
 **Counts** (distinct items, no repeats): permutations $n!$ (or $P(n,k)$ for length *k*); subsets $2^n$; combinations $\binom{n}{k}$.
 
-**Example set** {A, B, C, n = 3
+**Example set** {A, B, C,} n = 3
 
 Each node is a subproblem.
 Count = Sum of each subproblem and the number of choices that can be made at that time. 
 
 **Permutation**
 
-<img src="images/backtracking-permutations.png" width="600"/>
-
+![](images/backtracking-permutations.png)
 
 **All subsets** 
 
-<img src="images/backtracking-subsets.png" width="600"/>
+![](images/backtracking-subsets.png)
 
 ```python
 # Subsets
 ```
 
+
+
 # Trees
 
-
-
 ## Breadth First Search (BFS)
+Explore all sibling nodes first then visit children starting with the root node. 
 
+BFS uses a queue to keep track of which nodes to visit next. 
 
+![](images/tree-bfs.png)
+
+1. Create a queue and add the root node to it. 
+2. Loop through queue 
+3. Pop node from the queue
+4. Add any adjacent nodes to the queue
+5. Repeat
+
+``` typescript
+function bfs(root: TreeNode | null): number[] {
+    if (root == null) return [];
+
+    const result = [];
+    const queue = [root];
+
+    while (queue.length > 0) {
+        const node = queue.shift();
+        result.push(node.value)
+        if (node.left ) {
+            queue.push(node.left);
+        }
+        if(node.right) {
+            queue.push(node.right);
+        }
+    }
+    return result; 
+}
+```
 
 ## Depth First Search (DFS)
 
@@ -791,6 +819,8 @@ Count = Sum of each subproblem and the number of choices that can be made at tha
 
 # Graphs
 
+
+
 ## Breadth First Search ( BFS )
 
 Visits all nodes level by level starting with a root node.
@@ -801,13 +831,14 @@ Data Structure Concept: Queue
 2. Dequeue the node, enqueue the neighbor nodes, mark the neighbor nodes as visited.
 3. Continue level by level repeating the steps above until all nodes have been visited.
 
-**Use Cases**
 
-Works for both graphs and trees. 
 
-- In a graph, loops are possible so must use a visited array
+### Problem Clues
 
-Detect cycle in a graph, find shortest path in an unweighted graph.
+- The question asks for the shortest path in an unweighted graph.
+- It asks for the minimum number of steps or moves.
+- You need to explore nodes by distance or level.
+- You need the closest reachable target.
 
 ```python
 from collections import deque
@@ -855,7 +886,14 @@ Data Structure Concept: Stack
 3. Recursively visit all adjacent nodes
   - Each recursive call puts node on the call stack which backtracks through previously visited nodes
 
-The alternative method to using recursion to follow the same logic for bfs but using a stack instead of a queue.
+
+
+### Problem clues
+
+- You need to explore an entire connected region.
+- You need to explore possible paths or choices.
+- The problem involves cycle detection or topological ordering.
+- You need to traverse a graph and backtrack.
 
 ```python
 def depth_first_search(
@@ -880,9 +918,11 @@ graph = {"A": ["B", "C"], "B": ["D", "E"], "C": ["F"], "D": [], "E": [], "F": []
 print(depth_first_search(graph, "A"))  # ['A', 'B', 'D', 'E', 'C', 'F']
 ```
 
+
+
 # Graph Algorithms
 
+
+
 ## Dijkstra's Algorithm
-
-
 
