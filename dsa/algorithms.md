@@ -4,6 +4,8 @@
 2. What problem pattern signals that algorithm
 3. What invariant makes it correct
 
+---
+
 # Sorting
 
 ### Built in
@@ -80,6 +82,8 @@ arr = [1, 5, 4, 3, 2]
 print(merge_sort(arr))
 ```
 
+---
+
 
 
 # Binary Search
@@ -116,6 +120,8 @@ def binary_search(numbers, target):
 print(binary_search(numbers, 12))
 ```
 
+---
+
 
 
 # Hashing
@@ -146,28 +152,35 @@ index = hash(key) % tableSize
 - Do I need to count occurrences?
 - Do I need to quickly look up a value?
 
+---
+
 
 
 # Recursion
 
-Think of recursion as a stack of function calls where each function call is popped and returns a value to the previous function. Each function call is independent from the others, the arguement is not mutated. Think about it like a while true loop with break clause? 
+Think of recursion as breaking a problem into smaller subproblems.
+Each recursive call receives arguments that define the subproblem it needs to solve.
+Each call performs some work, makes recursive calls, and/or returns a result.
+A recursive call can use the return value of a smaller subproblem to solve its own problem.
+Each call has its own distinct state: its arguments, local variables, and position in the call stack.
 
-You are solving a bigger problem with sub problems. For example If I want to find 5-th member of the fibonacci sequence, I need to know 4-th and 3-rd. But to know 4-th I need 3-rd and 2-nd and so on. You find the solution to a big problem by first finding a solution for the smaller problem. So first write a return statement that solves that problem with smaller problems 
+**VISUALIZE IT LIKE A TREE WHERE EACH NODE IS A SUBPROBLEM. THINK ABOUT WHAT EACH SUBPROBLEM IS TRYING TO SOLVE. For a single recursion call at a time, visualize it has a tree with one child.** 
 
-In case of Fibonacci, as mentioned, for any n you need to know n-1 and n-2.
-Therefore, if we want to find fib(n)  we need to write:
-return fib(n-1) + fib(n-2).
+![](images/algorithms/recursion.png)
 
-Now we need a base case which is an answer to a problem we already know. 
-We know fib(1) && fib(2) = 1, so we write:
-if(n <= 2) {
-    return 1; 
-}
-Components of a recursive function: 
+1. Define the subproblem. What does one call of this function represent?
 
-1. Define a base case: Identify the simplest/base case where the solution is known. This is the stopping condition that prevents the function from infinitely calling itself.
-2. Define a recursive case: Define the problem in terms of smaller problems. Break down the problem into a smaller subproblems and call the function to recursively solve each subproblem
-3. Combine the solutions of the subproblems into a single solution
+2. Identify the base case. When can the call answer immediately?
+    Think from the bottom -> up 
+
+3. Does the call need information passed down from its parent?
+
+4. Does it need answers returned from its children?
+
+5. Does it need both?
+
+6. Write the recursive step. Decide how smaller calls help solve the current call.
+
 
 ```markdown
 BASE CASE
@@ -191,8 +204,6 @@ solve smaller problem
 ```python
 # Fib
 # each succeeding number is the sum of the two previous numbers
-
-
 def fib(n: int):
     # 1. Define base case
     if n == 0:
@@ -206,6 +217,8 @@ def fib(n: int):
 
 print(fib(10))
 ```
+
+---
 
 
 
@@ -318,6 +331,8 @@ def removeDuplicates(nums):
     return l + 1
 ```
 
+---
+
 
 
 # Sliding Window
@@ -427,6 +442,8 @@ def lengthOfLongestSubstring(s):
     return max
 ```
 
+---
+
 
 
 # Greedy
@@ -507,6 +524,8 @@ def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
 
     return count
 ```
+
+---
 
 
 
@@ -629,6 +648,8 @@ Choose `top down` or `bottom up` approach
 
 ## Kadane's Algorithm
 
+---
+
 
 
 # DP vs. Greedy
@@ -687,6 +708,10 @@ dp[6] = min(dp[5]+1, dp[3]+1, dp[2]+1) = min(3, 2, 3) = 2   ⇒   3 + 3
 
 At `a = 6`, DP does not "pick 4 first." It asks: is `1 + dp[5]`, `1 + dp[3]`, or `1 + dp[2]` best? Cached `dp[3] = 1` gives `1 + dp[3] = 2`, which wins.
 
+---
+
+
+
 # [BackTracking](https://www.youtube.com/watch?v=Ak-fxEwAR14)
 
 Explores all possible solutions by making choices, checking whether they work, and then undoing the choices when they lead to a dead end. 
@@ -738,6 +763,7 @@ def backtrack(state):
 - Explore/Retun all possible paths: maze or grid path problem
 
 
+
 ### Permutations vs Combinations vs Subsets
 
 > **LeetCode tip:** Problem titles overlap. Decide first: **Does order matter?** **Must the answer have exactly size *k*?**
@@ -771,24 +797,27 @@ Count = Sum of each subproblem and the number of choices that can be made at tha
 # Subsets
 ```
 
+---
+
 
 
 # Trees
+
 ![](images/algorithms/tree-bfs-dfs.png)
 
 ## Breadth First Search (BFS)
+
 Explore all sibling nodes first then visit children starting with the root node. 
 
 BFS uses a queue to keep track of which nodes to visit next. 
 
-
-1. Create a queue and add the root node to it. 
-2. Loop through queue 
-3. Pop node from the queue
+1. Create a queue and add the root node to it.
+2. Loop through queue
+3. Visit a node by popping it from the queue, do work
 4. Add any adjacent nodes to the queue
 5. Repeat
 
-``` typescript
+```typescript
 function bfs(root: TreeNode | null): number[] {
     if (root == null) return [];
 
@@ -797,19 +826,119 @@ function bfs(root: TreeNode | null): number[] {
 
     while (queue.length > 0) {
         const node = queue.shift();
-        result.push(node.value)
+        result.push(node.value) // visit the node
         if (node.left ) {
-            queue.push(node.left);
+            queue.push(node.left); // explore left 
         }
         if(node.right) {
-            queue.push(node.right);
+            queue.push(node.right); // explore right 
         }
     }
     return result; 
 }
 ```
 
+
+
+### Problem Clues
+
+- Finding shortest path
+- Traversing level by level
+- Find minimum dpeth of a binary Tree
+- Finding nearest node satisfying a condition
+- Problems involving distances or levels
+
+
+
 ## Depth First Search (DFS)
+
+Explores a branch as far as possible before backtracking and exploring the rest. 
+
+Uses recursion/stack to keep track of previously visited nodes. 
+
+1. Base case: if the node is null, return. (We've gone past a leaf, or the tree is empty.)
+2. Recursively explore the node's left and right children.
+3. Do work on the current node. *Where* this happens relative to the recursive calls determines the traversal type (pre/in/post order).
+
+```typescript
+const result = [];
+
+function dfs(node: TreeNode | null): {
+    if (node === null) {    // base case
+        return;
+    }
+    result.push(node) // visit the node
+    dfs(node.left)  // explore left
+    dfs(node.right) // explore right
+
+    result.push
+}
+
+dfs(root);
+return result; 
+```
+
+
+
+### Types of DFS
+
+*Think of where the current node is saved.*
+
+1. Preorder: Node -> left -> right
+
+```typescript
+result.push(node.val);
+dfs(node.left);
+dfs(node.right);
+```
+
+1. Inorder: left -> node -> right
+
+```typescript
+dfs(node.left);
+result.push(node.val);
+dfs(node.right);
+```
+
+1. PostOrder: left -> right -> node
+
+```typescript
+dfs(node.left);
+dfs(node.right);
+result.push(node.val);
+```
+
+
+### Problem Clues
+
+- Finding the maximum depth or height of a tree.
+- Checking whether a path meets a target sum.
+- Searching for a particular value.
+- Validating a binary search tree.
+- Calculating values from child subtrees.
+- Exploring every root-to-leaf path.
+
+```typescript
+/**
+    subproblem: return its max height 
+    base case: at node = null, height is 0 
+    parent: parent needs to pass child node
+    child: child needs to pass up the height
+    recursive step: get max height from left and right child nodes and + 1
+*/
+function maxDepth(root: TreeNode | null): number {
+    function dfs(node: TreeNode | null) {
+        if (node == null)
+            return 0; 
+        const leftMax = dfs(node.left);
+        const rightMax = dfs(node.right);
+        return Math.max(leftMax, rightMax) + 1;
+    }
+    return dfs(root); 
+};
+```
+
+---
 
 
 
@@ -882,9 +1011,9 @@ Traverse vertically before horizontally. Traverse all vertices reachable by the 
 Data Structure Concept: Stack
 
 1. Check if node has been visited
-2. If not visited then add mark as visited and add to result
-3. Recursively visit all adjacent nodes
-  - Each recursive call puts node on the call stack which backtracks through previously visited nodes
+2. If not visited then mark as visited and add to result
+3. Visit child nodes
+4. Backtrack to previous node once no more unexplored children
 
 
 
