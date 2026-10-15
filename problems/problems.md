@@ -1,4 +1,4 @@
-# Problems (Randomized)
+# All Problems (Randomized)
 
 - [ ] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) — Medium
 - [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard
@@ -33,7 +33,7 @@
 - [ ] [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) — Easy
 - [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) — Medium
 - [ ] [Redundant Connection](https://leetcode.com/problems/redundant-connection/) — Medium
-- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/ ) - Easy
+- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/) - Easy
 - [ ] [Sort Colors](https://leetcode.com/problems/sort-colors/) — Medium
 - [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) - Medium
 - [ ] [Gas Station](https://leetcode.com/problems/gas-station/) — Medium
@@ -52,20 +52,21 @@
 - [ ] [Non-Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) - Medium
 - [ ] [Maximum Average Subarray](https://leetcode.com/problems/maximum-average-subarray-i/description/) - Easy
 
+
+
 # Master
+
 - [ ] [Maximum Average Subarray](https://leetcode.com/problems/maximum-average-subarray-i/description/) - Easy
-- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/ ) - Easy
+- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/) - Easy
 - [ ] [Subsets](https://leetcode.com/problems/subsets/) — Medium
 - [ ] [Maximum Depth of a Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) - Easy
 - [ ] [Permutations](https://leetcode.com/problems/permutations/) — Medium
-- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium
-- [ ] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - Medium
 - [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy
 - [ ] [Path Sum](https://leetcode.com/problems/path-sum/description/) - Easy
 - [ ] [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) - Medium
 - [ ] [Coin Change](https://leetcode.com/problems/coin-change/) — Medium
-- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) - Medium
-- [ ] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) — Easy
 - [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) — Medium
 - [ ] [Remove Duplicates From Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/) - Easy
 - [ ] [Non-Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) - Medium
+- [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) — Medium
+- [ ] [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) — Easy
