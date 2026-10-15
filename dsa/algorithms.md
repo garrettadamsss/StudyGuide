@@ -1,11 +1,3 @@
-# Algorithms
-
-1. How the algorithm works
-2. What problem pattern signals that algorithm
-3. What invariant makes it correct
-
----
-
 # Sorting
 
 ### Built in
@@ -30,8 +22,6 @@ students = [("Bob", 20), ("Alice", 22), ("John", 19)]
 students.sort(key=lambda student: student[1])  # sort based on age
 print(students)
 ```
-
-
 
 ### MergeSort
 
@@ -309,7 +299,6 @@ Think: One pointer per sequence
 ```python
 # Two Sum II (no added space compexity) - Opposite Directions
 
-
 # Remove Duplicates - Same Direction
 def removeDuplicates(nums):
     if not nums:
@@ -372,7 +361,7 @@ for right:
   - The right pointer *grows* the window to take in new elements, and if a rule is broken, the left pointer *shrinks* the window until the condition is valid again.
   1. Expand right
   2. Check condition
-  3. Shrink left if necessary
+  3. Shrink left until condition is valid
   4. Record answer
   5. Repeat
 
@@ -470,6 +459,10 @@ It usually involves sorting first, so we get the next optimal choice quickly.
 > DP would break down the problem into subproblems for each amount, selecting the 3 and 4 coins => 2 coins total 
 
 
+
+### Difference between Greedy and standard problem
+
+There is still a decision at every step, but making decisions does not automatically make an algorithm greedy.
 
 ## Problem clues
 
@@ -634,7 +627,9 @@ Choose `top down` or `bottom up` approach
 - Make a decision at each position
 - Answer depenends on previous positions
 
-
+```
+# Coin Change
+```
 
 # DP Algorithms
 
@@ -789,6 +784,8 @@ Count = Sum of each subproblem and the number of choices that can be made at tha
 
 ```python
 # Subsets
+
+# Permutations
 ```
 
 ---

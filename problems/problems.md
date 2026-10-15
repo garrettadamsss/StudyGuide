@@ -1,58 +1,71 @@
 # Problems (Randomized)
 
-- [ ] [3Sum](https://leetcode.com/problems/3sum/) — Medium
-- [ ] [Remove Duplicates](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/) - Easy
-- [ ] [Subsets](https://leetcode.com/problems/subsets/) — Medium
-- [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard
-- [ ] [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) - Medium
-- [ ] [Maximum Average Subarray](https://leetcode.com/problems/maximum-average-subarray-i/description/) - Easy
-- [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/) — Medium
-- [ ] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) — Easy
-- [ ] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) — Easy
-- [ ] [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) — Easy
-- [ ] [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) — Easy
-- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/) — Medium
-- [ ] [Flood Fill](https://leetcode.com/problems/flood-fill/) — Easy
-- [ ] [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) — Medium
-- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/) — Medium
-- [ ] [Jump Game](https://leetcode.com/problems/jump-game/) — Medium
-- [ ] [Permutations](https://leetcode.com/problems/permutations/) — Medium
-- [ ] [Coin Change](https://leetcode.com/problems/coin-change/) — Medium ***
-- [ ] [Binary Search](https://leetcode.com/problems/binary-search/) — Easy
-- [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/) — Medium
-- [ ] [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) — Medium
-- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium
-- [ ] [House Robber](https://leetcode.com/problems/house-robber/) — Medium
-- [ ] [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) — Easy
-- [ ] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) — Easy
-- [ ] [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) — Medium
-- [ ] [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium
-- [ ] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy
-- [ ] [Gas Station](https://leetcode.com/problems/gas-station/) — Medium
-- [ ] [Sort an Array](https://leetcode.com/problems/sort-an-array/) — Medium
-- [ ] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - Medium
-- [ ] [Pow(x, n)](https://leetcode.com/problems/powx-n/) — Medium
-- [ ] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) — Easy
-- [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) — Medium
-- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) — Easy
-- [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) — Medium
-- [ ] [Sort Colors](https://leetcode.com/problems/sort-colors/) — Mediumrem
-- [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) — Medium
-- [ ] [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) — Easy
-- [ ] [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) — Easy
 - [ ] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) — Medium
-- [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) — Medium *** 
-- [ ] [Redundant Connection](https://leetcode.com/problems/redundant-connection/) — Medium
-- [ ] [Network Delay Time](https://leetcode.com/problems/network-delay-time/) — Medium
+- [ ] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Hard
+- [ ] [Jump Game](https://leetcode.com/problems/jump-game/) — Medium
+- [ ] [Subsets](https://leetcode.com/problems/subsets/) — Medium
+- [ ] [Two Sum](https://leetcode.com/problems/two-sum/description/) - Easy
 - [ ] [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) — Medium
+- [ ] [Maximum Depth of a Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) - Easy
+- [ ] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) — Easy
+- [ ] [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) — Easy
+- [ ] [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) — Easy
+- [ ] [Network Delay Time](https://leetcode.com/problems/network-delay-time/) — Medium
 - [ ] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) — Hard
-- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy ***
-- [ ] [Subsets](https://leetcode.com/problems/subsets/description/) - Medium ***
-- [ ] [Permutations](https://leetcode.com/problems/permutations/description/) - Medium ***
-- [ ] [Path Sum](https://leetcode.com/problems/path-sum/description/) - Easy ***
-- [ ] [Maximu Depth of a Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) - Easy ***
-- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) - Medium ***
+- [ ] [Permutations](https://leetcode.com/problems/permutations/) — Medium
+- [ ] [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) - Medium
+- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium
+- [ ] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — Easy
+- [ ] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - Medium
+- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy
+- [ ] [Maximum Average Subarray](https://leetcode.com/problems/maximum-average-subarray-i/description/) - Easy
+- [ ] [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) — Easy
+- [ ] [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) — Medium
+- [ ] [Pow(x, n)](https://leetcode.com/problems/powx-n/) — Medium
+- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/) — Medium
+- [ ] [Path Sum](https://leetcode.com/problems/path-sum/description/) - Easy
+- [ ] [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) - Medium
+- [ ] [Coin Change](https://leetcode.com/problems/coin-change/) — Medium
+- [ ] [Sort an Array](https://leetcode.com/problems/sort-an-array/) — Medium
+- [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/) — Medium
+- [ ] [3Sum](https://leetcode.com/problems/3sum/) — Medium
+- [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) — Medium
+- [ ] [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) — Easy
+- [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) — Medium
+- [ ] [Redundant Connection](https://leetcode.com/problems/redundant-connection/) — Medium
+- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/ ) - Easy
+- [ ] [Sort Colors](https://leetcode.com/problems/sort-colors/) — Medium
+- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) - Medium
+- [ ] [Gas Station](https://leetcode.com/problems/gas-station/) — Medium
+- [ ] [Binary Search](https://leetcode.com/problems/binary-search/) — Easy
+- [ ] [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) — Medium
+- [ ] [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) — Easy
+- [ ] [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) — Medium
+- [ ] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) — Easy
+- [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/) — Medium
+- [ ] [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) — Easy
+- [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) — Medium
+- [ ] [Flood Fill](https://leetcode.com/problems/flood-fill/) — Easy
+- [ ] [House Robber](https://leetcode.com/problems/house-robber/) — Medium
+- [ ] [Remove Duplicates From Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/) - Easy
+- [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) — Medium
+- [ ] [Non-Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) - Medium
+- [ ] [Maximum Average Subarray](https://leetcode.com/problems/maximum-average-subarray-i/description/) - Easy
 
-- 
-
-
+# Master
+- [ ] [Maximum Average Subarray](https://leetcode.com/problems/maximum-average-subarray-i/description/) - Easy
+- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/description/ ) - Easy
+- [ ] [Subsets](https://leetcode.com/problems/subsets/) — Medium
+- [ ] [Maximum Depth of a Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) - Easy
+- [ ] [Permutations](https://leetcode.com/problems/permutations/) — Medium
+- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Medium
+- [ ] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - Medium
+- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy
+- [ ] [Path Sum](https://leetcode.com/problems/path-sum/description/) - Easy
+- [ ] [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) - Medium
+- [ ] [Coin Change](https://leetcode.com/problems/coin-change/) — Medium
+- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/description/) - Medium
+- [ ] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) — Easy
+- [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) — Medium
+- [ ] [Remove Duplicates From Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/) - Easy
+- [ ] [Non-Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/) - Medium
