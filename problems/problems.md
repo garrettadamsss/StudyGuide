@@ -61,7 +61,6 @@
 - [ ] [Subsets](https://leetcode.com/problems/subsets/) — Medium
 - [ ] [Maximum Depth of a Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/) - Easy
 - [ ] [Permutations](https://leetcode.com/problems/permutations/) — Medium
-- [ ] [Assign Cookies](https://leetcode.com/problems/assign-cookies/) - Easy
 - [ ] [Path Sum](https://leetcode.com/problems/path-sum/description/) - Easy
 - [ ] [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/) - Medium
 - [ ] [Coin Change](https://leetcode.com/problems/coin-change/) — Medium

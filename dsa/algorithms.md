@@ -166,6 +166,14 @@ Each call has its own distinct state: its arguments, local variables, and positi
 5. Does it need both?
 6. Write the recursive step. Decide how smaller calls help solve the current call.
 
+Every recursion problem is -> 
+
+base case -> stopping condition
+
+do something with current input -> return a value to the parent or don't
+
+explore paths
+
 ```markdown
 BASE CASE
     ↓
@@ -630,6 +638,8 @@ Choose `top down` or `bottom up` approach
 ```
 # Coin Change
 ```
+
+
 
 # DP Algorithms
 
