@@ -74,8 +74,6 @@ print(merge_sort(arr))
 
 ---
 
-
-
 # Binary Search
 
 1. Start with low index(0) and high index(len(list) -1)
@@ -112,8 +110,6 @@ print(binary_search(numbers, 12))
 
 ---
 
-
-
 # Hashing
 
 Gives you very fast lookup, insertion, and deletion. 
@@ -126,8 +122,6 @@ Key → Hash Function → Index → Value
 ```python
 index = hash(key) % tableSize
 ```
-
-
 
 ### Two Types
 
@@ -144,54 +138,46 @@ index = hash(key) % tableSize
 
 ---
 
-
-
 # Recursion
 
-Think of recursion as breaking a problem into smaller subproblems.
-Each recursive call receives arguments that define the subproblem it needs to solve.
-Each call performs some work, makes recursive calls, and/or returns a result.
-A recursive call can use the return value of a smaller subproblem to solve its own problem.
-Each call has its own distinct state: its arguments, local variables, and position in the call stack.
+Think about recursion in two phases: **top-down** and **bottom-up**. 
 
-**VISUALIZE IT LIKE A TREE WHERE EACH NODE IS A SUBPROBLEM. THINK ABOUT WHAT EACH SUBPROBLEM IS TRYING TO SOLVE. For a single recursion call at a time, visualize it has a tree with one child.** 
+1. **top-down**: Break the original problem down into smaller subproblems with smaller inputs forming a tree ( or chain ) of recursive calls.
+2. **bottom-up**: Once the smallest subproblems (base case) has been solved, their return values flow back up the tree until the original problem is solved.
 
-![](images/algorithms/recursion.png)
+Example: You want to calculate the factorial of 4 
 
-1. Define the subproblem. What does one call of this function represent?
-2. Identify the base case. When can the call answer immediately?
-  Think from the bottom -> up
-3. Does the call need information passed down from its parent?
-4. Does it need answers returned from its children?
-5. Does it need both?
-6. Write the recursive step. Decide how smaller calls help solve the current call.
+\[
+4! = 4 \times 3 \times 2 \times 1
+\]
 
-Every recursion problem is -> 
+\[
+factorial(n) =
+\begin{cases}
+1 & \text{if } n = 0\\
+n \times factorial(n-1) & \text{if } n > 0
+\end{cases}
+\]
 
-base case -> stopping condition
+1. Top-down: Each subproblem can be solved by `n * factorial(n-1)` and our base case is the solution is 1 for n == 0;
 
-do something with current input -> return a value to the parent or don't
-
-explore paths
-
-```markdown
-BASE CASE
-    ↓
-stop
-
-RECURSIVE CASE
-    ↓
-solve smaller problem
+```python
+def factorial(n):
+    if n == 0:  # Base case
+        return 1
+    const sol = n * factorial(n - 1) # Breakdown 
+    return sol # Return solution up
 ```
 
+It is recursively called once so it forms a chain of calls. 
 
+![alt text](images/algorithms/recursion-factorial.png)
 
-### Problem pattern signals
+2. Bottom-up: Each recursive call returns the solution to the previous number.
 
-- Can I solve this problem by solving a smaller version of the same problem?
-- If you're given a tree, immediately consider DFS/recursion.
-- Nested structures. You don't know how deeply nested it is.
-- The problem asks you to explore all possibilities.
+![alt text](images/algorithms/recursion-factorial2.png)
+
+Example: Fibonaci
 
 ```python
 # Fib
@@ -205,19 +191,24 @@ def fib(n: int):
     # 2. Break down into subproblems
     # 3. Return the combined solution
     return fib(n - 2) + fib(n - 1)
-
-
-print(fib(10))
 ```
+
+Two recursive calls so treat it like a binary tree.
+![](images/algorithms/recursion-fib.png)
+
+### Problem pattern signals
+
+- Can I solve this problem by solving a smaller version of the same problem?
+- If you're given a tree, immediately consider DFS/recursion.
+- Nested structures. You don't know how deeply nested it is.
+- The problem asks you to explore all possibilities.
 
 ---
 
-
-
 # Two Pointers
 
-Use two indexes/pointers to move through a data structure, instead of repeadetly scanning elements. 
-The goal is often to reduce O(n^2) -> O(n); move the pointers forward so they don't repeadedly revisit elements. 
+Use two indexes/pointers to move through a data structure, instead of repeadetly scanning elements.  
+The goal is often to reduce O(n^2) -> O(n); i.e always move the pointers forward so they don't repeadedly revisit elements. 
 
 ### Need to ask
 
@@ -226,10 +217,7 @@ What does each pointer represent?
 What information do I know because of the current pointers?
 When can I safely move left?
 When can I safely move right?
-Why can't moving that pointer eliminate a valid answer?
 ```
-
-
 
 ### Setup
 
@@ -239,7 +227,7 @@ Why can't moving that pointer eliminate a valid answer?
 left          right
 ```
 
-**1. You maintain two positions:**
+**1. You maintain two positions (can be any position):**
 
 ```python
 left = 0
@@ -257,16 +245,12 @@ while left < right:
         right -= 1
 ```
 
-
-
 ### Types of pointers
 
-- Opposite direction: Pointers start at opposite ends and then move in opposite directions.
-- Same Direction: Pointers start at the beginning and then move in the same direction.
-- Multiple Arrays: One pointer is assigned to each individual array to compare, merge, or find intersections (e.g., merging two sorted lists)
-- In all cases the pointers could move at the same or different speeds.
-
-
+- **Opposite direction**: Pointers start at opposite ends and then move in opposite directions.
+- **Same Direction**: Pointers start at the beginning and then move in the same direction.
+- **Multiple Arrays**: One pointer is assigned to each individual array to compare, merge, or find intersections (e.g., merging two sorted lists)
+- **Slow/Fast Pointers**: In all cases the pointers could move at the same or different speeds.
 
 ### Problem clues
 
@@ -281,7 +265,7 @@ Think: Can I start at both ends and eliminate possibilities?
 
 **Strings**
 
-- Reverse something..
+- Reverse something...
 - Compare beginning and end...
 - Is this a palindrome...
 
@@ -307,7 +291,7 @@ Think: One pointer per sequence
 ```python
 # Two Sum II (no added space compexity) - Opposite Directions
 
-# Remove Duplicates - Same Direction
+# Remove Duplicates - Same Direction + Slow/Fast pointers
 def removeDuplicates(nums):
     if not nums:
         return 0
@@ -320,11 +304,11 @@ def removeDuplicates(nums):
             nums[l] = nums[r]
 
     return l + 1
+
+# Merge Two Sorted Lists - Different Data Structures
 ```
 
 ---
-
-
 
 # Sliding Window
 
@@ -335,8 +319,6 @@ Track or analyze a continuous sub-range (a subarray or substring) of data.
    L--------R
 ```
 
-
-
 ### Two Pointers vs. Sliding Window
 
 ```markdown
@@ -344,15 +326,13 @@ Two pointers = two positions that move according to some rule.
 Sliding window = two pointers defining a continuously maintained range.
 ```
 
-
-
 ### Two types
 
 1. Fixed-Size Window: The size of the window is predefined and never changes. You just slide it from the beginning of the array to the end.
-  1. Initialize starting range
-  2. Expand right, shrink left
-  3. Record answer
-  4. Repeat
+   1. Initialize starting range
+   2. Expand right, shrink left
+   3. Record answer
+   4. Repeat
 
 ```text
 for right:
@@ -366,12 +346,12 @@ for right:
 ```
 
 1. Dynamic (Variable-Size) Window: The size of the window grows or shrinks dynamically based on a condition.
-  - The right pointer *grows* the window to take in new elements, and if a rule is broken, the left pointer *shrinks* the window until the condition is valid again.
-  1. Expand right
-  2. Check condition
-  3. Shrink left until condition is valid
-  4. Record answer
-  5. Repeat
+   - The right pointer *grows* the window to take in new elements, and if a rule is broken, the left pointer *shrinks* the window until the condition is valid again.
+   1. Expand right
+   2. Check condition
+   3. Shrink left until condition is valid
+   4. Record answer
+   5. Repeat
 
 ```text
 left = 0
@@ -384,8 +364,6 @@ for right:
 
     update answer
 ```
-
-
 
 ### What problem pattern signals that algorithm
 
@@ -435,16 +413,14 @@ def lengthOfLongestSubstring(s):
 
 ---
 
-
-
 # Greedy
 
 Solves a problem by making the best-looking choice at each step without reconsidering previous decisions, hoping that these local choices lead to the best overall solution. 
 
 ## Greedy Problem Structure
 
-- Greedy Choice Property: The optimal solution can be constructed by making the best local choice at each stop.
-- Optimal Substructure: the optimal solution contains the optimal solutions to its sub-problems.
+- **Greedy Choice Property**: the optimal solution can be constructed by making the best local choice at each stop.
+- **Optimal Substructure**: the optimal solution contains the optimal solutions to its sub-problems.
 
 1. Iterate through the input
 2. Identify the available choices at this step
@@ -453,6 +429,24 @@ Solves a problem by making the best-looking choice at each step without reconsid
 5. Stop when the problem's goal is reached
 
 It usually involves sorting first, so we get the next optimal choice quickly. 
+
+### Difference between Greedy and standard problem
+
+There is still a decision at every step, but making decisions does not automatically make an algorithm greedy.
+
+**Standard iterative algorithm**
+
+You make a choice based on the problem's logic. You might follow a fixed rule, compare alternatives, use previous results, or even reconsider earlier decisions.
+
+A general category — it doesn't prescribe a particular decision strategy.
+
+**Greedy algorithm**
+
+At each step, choose what looks best right now, commit to it, and continue without backtracking.
+
+A specific strategy — local optimization in pursuit of a global optimum.
+
+
 
 > **WARNING**
 >
@@ -466,12 +460,6 @@ It usually involves sorting first, so we get the next optimal choice quickly.
 >
 > DP would break down the problem into subproblems for each amount, selecting the 3 and 4 coins => 2 coins total 
 
-
-
-### Difference between Greedy and standard problem
-
-There is still a decision at every step, but making decisions does not automatically make an algorithm greedy.
-
 ## Problem clues
 
 - Maximize the number of activities
@@ -484,7 +472,7 @@ There is still a decision at every step, but making decisions does not automatic
 ```python
 # Assign Cookies
 # Use two pointer + Greedy
-# The "Greedy choice" is to select the smallest cookie that satisfies a child, so sort both inputs in ascending order
+# Greedy Choice Property: select the smallest cookie that satisfies a child, preserving larger cookies for future children
 def findContentChildren(g: list[int], s: list[int]) -> int:
     g.sort()
     s.sort()
@@ -503,7 +491,7 @@ def findContentChildren(g: list[int], s: list[int]) -> int:
 
 # Non-Overlapping Intervals
 # Use two pointer + greedy
-# The "Greedy choice" is to add to count if curr.endtime > next.starttime
+# Greedy Choice Property: keep the interval that ends earliest so that you have as much room as possible for the next intervals
 def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
     intervals.sort(key=lambda a: a[1])
     count = 0
@@ -521,8 +509,6 @@ def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
 ```
 
 ---
-
-
 
 # [Dynamic Programming](https://www.youtube.com/watch?v=bPbuCAzzmUs)
 
@@ -639,29 +625,21 @@ Choose `top down` or `bottom up` approach
 # Coin Change
 ```
 
-
-
 # DP Algorithms
-
-
 
 ## Kadane's Algorithm
 
 ---
 
-
-
 # DP vs. Greedy
 
 Both build an answer step by step. The difference is whether a **local rule** is enough, or you must **compare all choices** using smaller subproblems.
-
 
 |              | Greedy                                | Dynamic programming                           |
 | ------------ | ------------------------------------- | --------------------------------------------- |
 | Decision     | Take the best-looking option *now*    | Try every valid choice; keep the best overall |
 | Memory       | Usually none (or a pointer / counter) | Table of subproblem answers (`dp[...]`)       |
 | Typical cost | Often `O(n log n)` after sort         | Often `O(n · states)`                         |
-
 
 **When greedy is enough:** the problem has the *greedy choice property* (a local optimum leads to a global optimum). Interval scheduling and "assign cookies" are standard examples.
 
@@ -674,8 +652,6 @@ Both build an answer step by step. The difference is whether a **local rule** is
 ```
 amount = 6,  coins = [1, 3, 4]
 ```
-
-
 
 #### Greedy (largest coin that fits)
 
@@ -709,8 +685,6 @@ At `a = 6`, DP does not "pick 4 first." It asks: is `1 + dp[5]`, `1 + dp[3]`, or
 
 ---
 
-
-
 # [BackTracking](https://www.youtube.com/watch?v=Ak-fxEwAR14)
 
 Explores all possible solutions by making choices, checking whether they work, and then undoing the choices when they lead to a dead end. 
@@ -736,8 +710,6 @@ Example: Generate all strings of size N using only the letters 'A' and 'B'.
         - Determine when to stop traversing a path
 ```
 
-
-
 ### The General Pattern
 
 ```python
@@ -753,27 +725,21 @@ def backtrack(state):
         undo_choice(state, choice)
 ```
 
-
-
 ### Problem Clues
 
 - Generate all: all permutations, subsets, or combinations.
 - Find every valid arrangement/combinations: N-Queens or Sudoku solutions.
 - Explore/Retun all possible paths: maze or grid path problem
 
-
-
 ### Permutations vs Combinations vs Subsets
 
 > **LeetCode tip:** Problem titles overlap. Decide first: **Does order matter?** **Must the answer have exactly size *k*?**
-
 
 | Question        | Order matters     | Fixed size *k*                | Typical backtrack step                          |
 | --------------- | ----------------- | ----------------------------- | ----------------------------------------------- |
 | **Permutation** | yes (`AB` ≠ `BA`) | often all *n* (sometimes *k*) | pick an unused item for the next slot           |
 | **Combination** | no (`AB` = `BA`)  | yes, exactly *k*              | include or skip; only extend from later indices |
 | **Subset**      | no                | no (any size 0…*n*)           | include or skip each element                    |
-
 
 A **combination** is a **subset** with exactly *k* elements. Phrases like "all combinations" usually mean **all subsets**.
 
@@ -799,8 +765,6 @@ Count = Sum of each subproblem and the number of choices that can be made at tha
 ```
 
 ---
-
-
 
 # Trees
 
@@ -839,8 +803,6 @@ function bfs(root: TreeNode | null): number[] {
 }
 ```
 
-
-
 ### Problem Clues
 
 - Finding shortest path
@@ -848,8 +810,6 @@ function bfs(root: TreeNode | null): number[] {
 - Find minimum depth of a binary Tree
 - Finding nearest node satisfying a condition
 - Problems involving distances or levels
-
-
 
 ## Depth First Search (DFS)
 
@@ -879,8 +839,6 @@ dfs(root);
 return result; 
 ```
 
-
-
 ### Types of DFS
 
 *Think of where the current node is processed.*
@@ -908,8 +866,6 @@ dfs(node.left);
 dfs(node.right);
 result.push(node.val);
 ```
-
-
 
 ### Problem Clues
 
@@ -966,19 +922,13 @@ function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
 
 ---
 
-
-
 ## Binary Search Tree (BST)
-
-
 
 # Graphs vs. Trees
 
 Biggest difference in implementation is the fact that you need a visited set to prevent circular loops in graphs. 
 
 # Graphs
-
-
 
 ## Breadth First Search ( BFS )
 
@@ -989,8 +939,6 @@ Data Structure Concept: Queue
 1. Enqueue the source node and mark as visited.
 2. Dequeue the node, enqueue the neighbor nodes, mark the neighbor nodes as visited.
 3. Continue level by level repeating the steps above until all nodes have been visited.
-
-
 
 ### Problem Clues
 
@@ -1032,8 +980,6 @@ input = {
 print(breadthFirstSearch(input, "A"))  # ['A', 'B', 'C', 'D', 'E', 'F']
 ```
 
-
-
 ## Depth First Search ( DFS )
 
 Traverse vertically before horizontally. Traverse all vertices reachable by the adjacent vertex. Once it reaches a vertex with no unvisted neighbors it backtracks to previous vertex to explore unvisited paths. 
@@ -1044,8 +990,6 @@ Data Structure Concept: Stack
 2. If not visited then mark as visited and add to result
 3. Visit child nodes
 4. Backtrack to previous node once no more unexplored children
-
-
 
 ### Problem clues
 
@@ -1077,11 +1021,7 @@ graph = {"A": ["B", "C"], "B": ["D", "E"], "C": ["F"], "D": [], "E": [], "F": []
 print(depth_first_search(graph, "A"))  # ['A', 'B', 'D', 'E', 'C', 'F']
 ```
 
-
-
 # Graph Algorithms
-
-
 
 ## Dijkstra's Algorithm
 
